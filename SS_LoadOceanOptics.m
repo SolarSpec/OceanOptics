@@ -76,6 +76,7 @@ if ismember(1, datatype)                    %Emission
         pos = pos + [272, 0, 0, 0];
     end
     disp('See Emtables cell array for Absorbtion data tables');
+    clear Emmatrix;
 end
 if ismember(2, datatype)                    %Absorbance
     abs = uitab(tabgp,"Title","Absorption");
@@ -110,6 +111,7 @@ if ismember(2, datatype)                    %Absorbance
         pos = pos + [252, 0, 0, 0];  
     end
     disp('See Abtables cell array for Absorption data tables');
+    clear Abmatrix;
 end
 if ismember(3, datatype)                    %Reflection
     Ref = uitab(tabgp,"Title","Reflection");
@@ -146,6 +148,7 @@ if ismember(3, datatype)                    %Reflection
         pos = pos + [252, 0, 0, 0];
     end
     disp('See Reftables cell array for Reflection data tables');
+    clear Refmatrix;
 end
 if ismember(4, datatype)                    %Kubelka-Munk
     KM = uitab(tabgp,"Title","Kubelka-Munk");
@@ -182,5 +185,9 @@ if ismember(4, datatype)                    %Kubelka-Munk
         pos = pos + [252, 0, 0, 0];
     end
     disp('See KMtables cell array for Kubelka-Munk data tables');
+    clear KMmatrix;
 end
 
+%Clear Extra Data
+clear datatype idx j k labels numfile openfile pathname pos set Wavelength Xdata Ydata
+clear fig2 tabgp uit3

@@ -75,7 +75,7 @@ if ismember(1, datatype)                    %Emission
         uit1{k}=uitable(Em,"Data",table2array(Emtables{k}), 'ColumnName', Emtables{k}.Properties.VariableNames, 'RowName',[], 'Position',pos);
         pos = pos + [272, 0, 0, 0];
     end
-    disp('See Emtables cell array for Absorbtion data tables');
+    disp('See Emtables cell array for Emission data tables');
     clear Emmatrix;
 end
 if ismember(2, datatype)                    %Absorbance
